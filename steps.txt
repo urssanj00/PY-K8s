@@ -1,3 +1,13 @@
+Docker Steps
+###########################################
+# Build the Docker image
+docker build -t flask-kubernetes-app .
+
+# Run the Docker container locally to test
+docker run -p 5000:5000 flask-kubernetes-app
+
+
+
 # Build and Push Docker Image to a Registry
 ###########################################
 # Tag the image
