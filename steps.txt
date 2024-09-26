@@ -1,0 +1,25 @@
+# Build and Push Docker Image to a Registry
+###########################################
+# Tag the image
+docker tag flask-kubernetes-app:latest your_dockerhub_username/flask-kubernetes-app:latest
+
+# Push the image
+docker push your_dockerhub_username/flask-kubernetes-app:latest
+
+# Deploy to Kubernetes
+###########################################
+# Apply the deployment
+kubectl apply -f deployment.yaml
+
+# Apply the service
+kubectl apply -f service.yaml
+
+# Verify the Deployment
+###########################################
+# Check the status of your pods
+kubectl get pods
+
+# Check the status of your service
+kubectl get services
+
+
